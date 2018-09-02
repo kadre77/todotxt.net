@@ -14,14 +14,14 @@ namespace ToDoTests
     class TaskListTests
     {
 
-		[TestFixtureSetUp]
+		[SetUp]
 		public void TFSetup()
 		{
 			if (!File.Exists(Data.TestDataPath))
 				File.WriteAllText(Data.TestDataPath, "");
 		}
 
-		[TestFixtureTearDown]
+		[TearDown]
 		public void TearDown()
 		{
 			if (File.Exists(Data.TestDataPath))

@@ -43,11 +43,19 @@
     <Compile Include="..\Client\Properties\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Format\ContextTextFormatter.cs" />
+    <Compile Include="Format\FormattedItem.cs" />
+    <Compile Include="Format\FormatType.cs" />
+    <Compile Include="Format\ITextFormatter.cs" />
+    <Compile Include="Format\PriorityTextFormatter.cs" />
+    <Compile Include="Format\ProjectTextFormatter.cs" />
+    <Compile Include="Format\TextFormatter.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="TaskException.cs" />
     <Compile Include="TaskList.cs" />
     <Compile Include="Task.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Format\UrlTextFormatter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CommonExtensions\CommonExtensions.csproj">
@@ -55,6 +63,7 @@
       <Name>CommonExtensions</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

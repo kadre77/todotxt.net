@@ -280,10 +280,11 @@
                 </LinearGradientBrush>
             </Menu.Background>
         </Menu>
-        <local:IntellisenseTextBox Grid.Row="1" Height="23" Margin="0,0,0,0" x:Name="taskText" AcceptsReturn="False" Cursor="IBeam" VerticalAlignment="Top"
+        <local:IntellisenseTextBox Grid.Row="1" Height="24" Margin="0,0,0,0" x:Name="taskText" AcceptsReturn="False" Cursor="IBeam" VerticalAlignment="Top"
                                    KeyUp="taskText_PreviewKeyUp" 
                                    TaskList="{Binding TaskList}"
-                                   CaseSensitive="{Binding Source={x:Static local:User.Default}, Path=IntellisenseCaseSensitive}" />
+                                   CaseSensitive="{Binding Source={x:Static local:User.Default}, Path=IntellisenseCaseSensitive}"
+                                   FontSize="14" />
         <ListBox Grid.Row="2" ItemsSource="{Binding Tasks}" IsSynchronizedWithCurrentItem="True" SelectedItem="{Binding SelectedItem}" Name="lbTasks" Margin="0,10,0,0" SelectedIndex="0" IsTextSearchEnabled="False" AlternationCount="2" BorderBrush="{x:Null}" SelectionMode="Extended" Style="{StaticResource WordWrapEnabledListBox}">
             <ListBox.CommandBindings>
                 <CommandBinding Command="ApplicationCommands.Copy" CanExecute="WhenTasksSelectedCanExecute" Executed="CopyTasksExecuted" />
